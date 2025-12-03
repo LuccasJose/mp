@@ -1,4 +1,5 @@
-# Dashboard Executivo - Nuvem
+# Dashboard Executivo
+
 
 ## 📊 Sobre o Projeto
 
