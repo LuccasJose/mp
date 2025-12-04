@@ -57,5 +57,22 @@ O dashboard espera dados no formato JSON contendo:
 Este dashboard é atualizado continuamente com novas funcionalidades e melhorias.
 ---
 
+## Changelog
+
+### 2025-12-04 — Atualização: `index.html`
+
+- Arquivo atualizado: `index.html` substituído/atualizado no commit mais recente.
+- Correções e refatorações de código para melhorar performance e legibilidade.
+
+Principais mudanças visuais e de comportamento:
+
+- **Gráfico ABC:** rótulos simplificados (apenas contagens A/B/C) e tooltip condensado mostrando valor em R$ e percentual — melhora a leitura rápida dos valores.
+- **Interatividade do gráfico ABC:** clique agora filtra as listas de ranking de forma mais direta (top 10 mais/menos vendidos) com lógica de filtragem simplificada e botões de "Restaurar" exibidos corretamente.
+- **Painel de Insights (IA):** contagem de insights (`insightCount`) atualizada diretamente; cards de insight tiveram ajuste na posição da tag ABC e estilo levemente ajustado para consistência visual.
+- **Busca de Insights:** comportamento de filtro simplificado (busca por nome e texto do insight) para respostas mais rápidas; remoção de checagens redundantes.
+- **Pequenas melhorias de UI:** simplificação de legendas, ajustes em estilos e visibilidade de botões — nenhum redesign radical, foco em clareza e performance.
+
+Se quiser, eu posso detalhar o diff completo de `index.html` (linhas alteradas) ou gerar um changelog mais formal (por commit/autor). 
+
 **Desenvolvido para análise estratégica de vendas e produtos**
 
