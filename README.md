@@ -108,7 +108,7 @@ O histórico abaixo agrupa as alterações por versão (data/versão aproximada)
 	- `6cf5630` — Add changelog entry for 2025-12-04 (index.html update)
 	- `b0944ea` — Add history section (recent commits) to README
 
-Observação: os códigos entre crases são os hashes de commit; posso transformar cada hash em link direto para o commit no GitHub caso queira (requer o URL do repositório, que aqui é `https://github.com/LuccasJose/mp`).
+   ---
 
 **Desenvolvido para análise estratégica de vendas e produtos**
 
