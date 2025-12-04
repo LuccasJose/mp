@@ -66320,9 +66320,12 @@
         if (chartABCInstance) chartABCInstance.destroy();
         if (countA + countB + countC === 0) return;
 
-        const pctA = totalGeral > 0 ? ((valorA / totalGeral) * 100).toFixed(1) : 0;
-        const pctB = totalGeral > 0 ? ((valorB / totalGeral) * 100).toFixed(1) : 0;
-        const pctC = totalGeral > 0 ? ((valorC / totalGeral) * 100).toFixed(1) : 0;
+        const pctAraw = totalGeral > 0 ? ((valorA / totalGeral) * 100) : 0;
+        const pctBraw = totalGeral > 0 ? ((valorB / totalGeral) * 100) : 0;
+        const pctCraw = totalGeral > 0 ? ((valorC / totalGeral) * 100) : 0;
+        const pctA = Math.round(pctAraw);
+        const pctB = Math.round(pctBraw);
+        const pctC = Math.round(pctCraw);
 
         chartABCInstance = new Chart(ctx, {
             type: 'doughnut',
@@ -66350,13 +66353,15 @@
                           const index = context.dataIndex;
                           const counts = [countA, countB, countC];
                           const valores = [valorA, valorB, valorC];
-                          const pcts = [pctA, pctB, pctC];
-                          return [
-                            `Produtos: ${counts[index]}`,
-                            `Valor Total: ${valores[index].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`,
-                            `Percentual: ${pcts[index]}% do faturamento`,
-                            `Valor Médio: ${counts[index] > 0 ? (valores[index] / counts[index]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'R$ 0,00'} por produto`
-                          ];
+                          // usar percentuais inteiros no tooltip também (baseados em pctRaw arredondado)
+                          const pcts = [Math.round(pctAraw), Math.round(pctBraw), Math.round(pctCraw)];
+                          const lines = [];
+                          lines.push(`Produtos: ${counts[index]}`);
+                          lines.push(`Valor Total: ${valores[index].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`);
+                          lines.push(`Percentual: ${pcts[index]}% do faturamento`);
+                          const valorMedio = counts[index] > 0 ? (valores[index] / counts[index]) : 0;
+                          lines.push(`Valor Médio: ${valorMedio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} por produto`);
+                          return lines;
                         }
                       }
                     }
