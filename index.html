@@ -66327,22 +66327,32 @@
         chartABCInstance = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: [`A: ${countA}`, `B: ${countB}`, `C: ${countC}`],
-                datasets: [{ data: [countA, countB, countC], backgroundColor: ['#10b981', '#f59e0b', '#ef4444'], borderWidth: 2, borderColor: '#ffffff' }]
+          labels: [
+            `A: ${countA} produtos (${pctA}%)`,
+            `B: ${countB} produtos (${pctB}%)`,
+            `C: ${countC} produtos (${pctC}%)`
+          ],
+          datasets: [{ data: [countA, countB, countC], backgroundColor: ['#10b981', '#f59e0b', '#ef4444'], borderWidth: 2, borderColor: '#ffffff' }]
             },
             options: { 
                 responsive: true, maintainAspectRatio: false, 
                 plugins: { 
                     legend: { position: 'right', labels: { boxWidth: 12 } },
                     tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const i = context.dataIndex;
-                                const pcts = [pctA, pctB, pctC];
-                                const vals = [valorA, valorB, valorC];
-                                return [`R$ ${vals[i].toLocaleString('pt-BR', { minimumFractionDigits: 2 })} (${pcts[i]}%)`];
-                            }
-                        }
+              callbacks: {
+                label: function(context) {
+                  const index = context.dataIndex;
+                  const counts = [countA, countB, countC];
+                  const valores = [valorA, valorB, valorC];
+                  const pcts = [pctA, pctB, pctC];
+                  return [
+                    `Produtos: ${counts[index]}`,
+                    `Valor Total: ${valores[index].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`,
+                    `Percentual: ${pcts[index]}% do faturamento`,
+                    `Valor Médio: ${counts[index] > 0 ? (valores[index] / counts[index]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'R$ 0,00'} por produto`
+                  ];
+                }
+              }
                     }
                 } 
             }
