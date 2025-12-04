@@ -89,5 +89,26 @@ As entradas abaixo foram extraídas do histórico Git do repositório e mostram 
 
 Se quiser, posso formatar isso como uma tabela, incluir links para os commits no GitHub, ou gerar um histórico completo (mais commits).
 
+## Histórico por Versão
+
+O histórico abaixo agrupa as alterações por versão (data/versão aproximada). Se desejar, posso ajustar os números de versão para seguir um esquema semântico (`v0.1.0` etc.) ou criar tags Git correspondentes.
+
+- **v0.1 — 2025-12-01**
+	- `cb79dec` — Create index
+	- `1779d8c` — Merge pull request #2 from LuccasJose/nuvem-teste1
+	- `64a1a43` — Delete index
+
+- **v0.2 — 2025-12-03**
+	- `4dd003d` — Adiciona Dashboard Executivo com análise ABC e insights de IA
+	- `5c9cf8f` — Atualiza Dashboard Executivo com análise ABC interativa, busca de insights e melhorias
+	- `d24760b` — Update README.md
+
+- **v0.3 — 2025-12-04**
+	- `1b54b0c` — Add new index.html
+	- `6cf5630` — Add changelog entry for 2025-12-04 (index.html update)
+	- `b0944ea` — Add history section (recent commits) to README
+
+Observação: os códigos entre crases são os hashes de commit; posso transformar cada hash em link direto para o commit no GitHub caso queira (requer o URL do repositório, que aqui é `https://github.com/LuccasJose/mp`).
+
 **Desenvolvido para análise estratégica de vendas e produtos**
 
