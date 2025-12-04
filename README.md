@@ -72,7 +72,6 @@ Principais mudanças visuais e de comportamento:
 - **Busca de Insights:** comportamento de filtro simplificado (busca por nome e texto do insight) para respostas mais rápidas; remoção de checagens redundantes.
 - **Pequenas melhorias de UI:** simplificação de legendas, ajustes em estilos e visibilidade de botões — nenhum redesign radical, foco em clareza e performance.
 
-Se quiser, eu posso detalhar o diff completo de `index.html` (linhas alteradas) ou gerar um changelog mais formal (por commit/autor). 
 
 ## Histórico (commits recentes)
 
