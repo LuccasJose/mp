@@ -66339,20 +66339,26 @@
                 plugins: { 
                     legend: { position: 'right', labels: { boxWidth: 12 } },
                     tooltip: {
-              callbacks: {
-                label: function(context) {
-                  const index = context.dataIndex;
-                  const counts = [countA, countB, countC];
-                  const valores = [valorA, valorB, valorC];
-                  const pcts = [pctA, pctB, pctC];
-                  return [
-                    `Produtos: ${counts[index]}`,
-                    `Valor Total: ${valores[index].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`,
-                    `Percentual: ${pcts[index]}% do faturamento`,
-                    `Valor Médio: ${counts[index] > 0 ? (valores[index] / counts[index]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'R$ 0,00'} por produto`
-                  ];
-                }
-              }
+                      callbacks: {
+                        title: function(context) {
+                          if (!context || !context.length) return '';
+                          const i = context[0].dataIndex;
+                          const categorias = ['A','B','C'];
+                          return `Categoria ${categorias[i]}`;
+                        },
+                        label: function(context) {
+                          const index = context.dataIndex;
+                          const counts = [countA, countB, countC];
+                          const valores = [valorA, valorB, valorC];
+                          const pcts = [pctA, pctB, pctC];
+                          return [
+                            `Produtos: ${counts[index]}`,
+                            `Valor Total: ${valores[index].toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`,
+                            `Percentual: ${pcts[index]}% do faturamento`,
+                            `Valor Médio: ${counts[index] > 0 ? (valores[index] / counts[index]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'R$ 0,00'} por produto`
+                          ];
+                        }
+                      }
                     }
                 } 
             }
