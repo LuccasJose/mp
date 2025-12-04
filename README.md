@@ -87,7 +87,6 @@ As entradas abaixo foram extraídas do histórico Git do repositório e mostram 
 - `1779d8c` — 2025-12-01 — Luccas — Merge pull request #2 from LuccasJose/nuvem-teste1
 - `cb79dec` — 2025-12-01 — Luccas — Create index
 
-Se quiser, posso formatar isso como uma tabela, incluir links para os commits no GitHub, ou gerar um histórico completo (mais commits).
 
 ## Histórico por Versão
 
