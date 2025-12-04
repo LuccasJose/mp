@@ -74,5 +74,20 @@ Principais mudanças visuais e de comportamento:
 
 Se quiser, eu posso detalhar o diff completo de `index.html` (linhas alteradas) ou gerar um changelog mais formal (por commit/autor). 
 
+## Histórico (commits recentes)
+
+As entradas abaixo foram extraídas do histórico Git do repositório e mostram as alterações mais recentes.
+
+- `6cf5630` — 2025-12-04 — Luccas — Add changelog entry for 2025-12-04 (index.html update)
+- `1b54b0c` — 2025-12-04 — Luccas — Add new index.html
+- `d24760b` — 2025-12-03 — Luccas — Update README.md
+- `5c9cf8f` — 2025-12-03 — Luccas — Atualiza Dashboard Executivo com análise ABC interativa, busca de insights e melhorias
+- `4dd003d` — 2025-12-03 — Luccas — Adiciona Dashboard Executivo com análise ABC e insights de IA
+- `64a1a43` — 2025-12-01 — Luccas — Delete index
+- `1779d8c` — 2025-12-01 — Luccas — Merge pull request #2 from LuccasJose/nuvem-teste1
+- `cb79dec` — 2025-12-01 — Luccas — Create index
+
+Se quiser, posso formatar isso como uma tabela, incluir links para os commits no GitHub, ou gerar um histórico completo (mais commits).
+
 **Desenvolvido para análise estratégica de vendas e produtos**
 
